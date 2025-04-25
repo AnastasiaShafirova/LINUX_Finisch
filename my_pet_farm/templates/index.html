@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <title>Список животных</title>
+</head>
+<body>
+    <h1>Список животных</h1>
+    <a href="/add">Добавить животное</a>
+    <table border="1" cellpadding="5" cellspacing="0">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Имя</th>
+                <th>Вид</th>
+                <th>Порода</th>
+                <th>Дата рождения</th>
+                <th>Пол</th>
+                <th>Статус здоровья</th>
+                <th>Контакт владельца</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for animal in animals %}
+            <tr>
+                <td>{{ animal.id }}</td>
+                <td>{{ animal.name }}</td>
+                <td>{{ animal.species }}</td>
+                <td>{{ animal.breed }}</td>
+                <td>{{ animal.birth_date }}</td>
+                <td>{{ animal.gender }}</td>
+                <td>{{ animal.health_status }}</td>
+                <td>{{ animal.owner_contact }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
