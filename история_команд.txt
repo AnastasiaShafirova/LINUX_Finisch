@@ -1,0 +1,65 @@
+    1  cat > Домашние_животные.txt
+    2  cat > Вьючные_животные.txt
+    3  cat Домашние_животные.txt Вьючные_животные.txt > Друзья_человека.txt
+    4  cat Друзья_человека.txt
+    5  mv Друзья_человека.txt Друзья_человека_в_питомнике.txt
+    6  mkdir Питомник
+    7  mv Друзья_человека_в_питомнике.txt Питомник/
+    8  sudo apt-get update
+    9  sudo apt-get install software-properties-common
+   10  sudo add-apt-repository ppa:mysql-apt-config/mysql-8.0
+   11  sudo apt install mysql-server
+   12  sudo systemctl start mysql
+   13  sudo mysql_secure_installation
+   14  sudo systemctl status mysql
+   15  vagrant init ubuntu/bionic64
+   16  sudo apt install vagrant
+   17  wget -qO- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | sudo tee /usr/share/keyring/vagrant.gpg > /dev/null
+   18  sudo sh -c 'echo "deb [signed-by=/usr/share/keyring/vagrant.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" > /etc/apt/sources.list.d/vagrant.list'
+   19  sudo apt update
+   20  wget https://dev.mysql.com/get/mysql-apt-config_0.8.24-1_all.deb
+   21  sudo dpkg -i mysql-apt-config_0.8.24-1_all.deb
+   22  sudo apt update
+   23  cd /etc/apt/sources.list.d
+   24  ls
+   25  sudo rm jonathonf-backports-*.list
+   26  sudo rm apt-releases.hashicorp.com-*.list
+   27  [200~sudo apt update
+   28  sudo apt update
+   29  cd
+   30  sudo apt update
+   31  sudo rm /etc/apt/sources.list.d/jonathonf-ubuntu-backports-noble.sources
+   32  sudo rm /etc/apt/sources.list.d/ubuntu-toolchain-r-ubuntu-test-noble.sources
+   33  sudo rm /etc/apt/sources.list.d/vagrant.list
+   34  sudo apt update
+   35  wget https://dev.mysql.com/get/mysql-apt-config_0.8.24-1_all.deb
+   36  sudo dpkg -i mysql-apt-config_0.8.24-1_all.deb
+   37  sudo apt update
+   38  sudo apt install mysql-server mysql-client
+   39  sudo systemctl start mysql
+   40  sudo systemctl enable mysql
+   41  mysql -u root -p
+   42  sudo mysql
+   43  cd ~
+   44  echo "собака" > домашние_животные.txt
+   45  echo "кошка"  >> домашние_животные.txt
+   46  echo "хомяк"  >> домашние_животные.txt
+   47  echo "лошадь"         > вьючные_животные.txt
+   48  echo "верблюд"        >> вьючные_животные.txt
+   49  echo "осёл"           >> вьючные_животные.txt
+   50  cat домашние_животные.txt
+   51  cat вьючные_животные.txt
+   52  cd ~
+   53  cat домашние_животные.txt вьючные_животные.txt > друзья_человека.txt
+   54  cat друзья_человека.txt
+   55  mkdir -p ~/питомник
+   56  mv друзья_человека.txt ~/питомник/
+   57  ls ~/питомник
+   58  cat ~/питомник/друзья_человека.txt
+   59  cd ~/питомник
+   60  nano setup_tasks.sh
+   61  chmod +x setup_tasks.sh
+   62  ./setup_tasks.sh
+   63  nano setup_tasks.sh
+   64  chmod +x setup_tasks.sh
+   65  ./setup_tasks.sh
